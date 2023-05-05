@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        background-color: black;
+      }
+      .heading {
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        margin-top: 12%;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .image {
+        display: flex;
+        justify-content: center;
+      }
+      .btn1 {
+        background-color: yellow;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 15px;
+        margin-left: 500px;
+      }
+      .btn2 {
+        background-color: yellow;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 15px;
+        margin-left: 350px;
+      }
+
+      .btn1:hover,
+      .btn2:hover {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Play the game of turn on and turn off</h1>
+    <div class="image">
+      <img id="image" src="bulb off.png" alt="no found" />
+    </div>
+    <div class="bttn">
+      <input class="btn1" type="button" onclick="turnon()" value="Turnon" />
+      <input class="btn2" type="button" onclick="turnoff()" value="Turnoff" />
+    </div>
+
+    <script>
+      const turnon = () => {
+        document.getElementById("image").src = "bulb on.png";
+      };
+
+      const turnoff = () => {
+        document.getElementById("image").src = "bulb off.png";
+      };
+    </script>
+  </body>
+</html>
